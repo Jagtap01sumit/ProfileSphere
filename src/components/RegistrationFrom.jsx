@@ -38,8 +38,10 @@ export default function RegistrationForm() {
             setLoading(true);
             const response = await axios.post("/api/users/signup", user);
             console.log("Signup success", response.data);
+            console.log("!");
             router.push("/login");
-            console.log("hello")
+            console.log("2");
+
         } catch (error) {
             console.log("Signup failed", error.message);
 
@@ -73,7 +75,7 @@ export default function RegistrationForm() {
                         </div>
                         <div className="py-10 px-10 w-full flex flex-col items-center justify-center ">
 
-                            <h1 className="text-5xl font-bold text-blue-500 mb-2">{loading ? "Processing" : "Registration"}</h1>
+                            <h1 className="text-5xl font-bold text-blue-500 mb-2">{loading ? "Processing" : "Signup"}</h1>
                             <div className="border-2 w-10 border-blue-500 inline-block mb-8"></div>
 
 
@@ -117,8 +119,8 @@ export default function RegistrationForm() {
                                     <label className='flex-items-center text-xs '></label>
 
 
-                                    {error && (<div className="bg-red-500 text-white w-fit text-sm py-1 px-3  mb-2 rounded-md mt-2 flex items-start">{error}</div>)} 
- 
+                                    {error && (<div className="bg-red-500 text-white w-fit text-sm py-1 px-3  mb-2 rounded-md mt-2 flex items-start">{error}</div>)}
+
 
                                     <button
                                         onClick={handleSubmit}
