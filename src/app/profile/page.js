@@ -11,13 +11,7 @@ export default function page() {
     <main className="m-12">
       <Prof_Navbar />
       <TopicList />
-      <TopicList />
-      <TopicList />
-      <TopicList />
-
-      <TopicList />
-
-      <LogoutBtn />
+     <LogoutBtn/>
     </main>
   );
 }

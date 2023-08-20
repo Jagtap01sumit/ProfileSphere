@@ -22,7 +22,8 @@ export function middleware(request: NextRequest) {
 //matching paths
 export const config = {
     matcher: [
-
+        '/addTopic',
+        '/editTopics',  //u cannot direct access some pages like profile , addTopic , editTopic
         '/profile',
         '/login',
         '/signup'],
