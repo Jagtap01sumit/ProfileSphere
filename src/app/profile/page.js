@@ -2,14 +2,14 @@
 
 import React from "react";
 import TopicList from "@/components/TopicList";
-import Navbar from "@/components/Prof_Navbar";
+import Prof_Navbar from "@/components/Prof_Navbar";
 
 import LogoutBtn from "@/components/LogoutBtn";
 
 export default function page() {
   return (
     <main className="m-12">
-      <Navbar />
+      <Prof_Navbar />
       <TopicList />
       <TopicList />
       <TopicList />

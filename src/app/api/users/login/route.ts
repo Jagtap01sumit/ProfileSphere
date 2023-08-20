@@ -16,6 +16,7 @@ export async function POST(request: NextRequest){
         //check if user exists
         const user = await User.findOne({email})
         if(!user){
+            alert("User does not exist");
             return NextResponse.json({error: "User does not exist"}, {status: 400})
         }
         console.log("user exists");
@@ -24,6 +25,7 @@ export async function POST(request: NextRequest){
         //check if password is correct
         const validPassword = await bcryptjs.compare(password, user.password)
         if(!validPassword){
+            alert("Invalid Password");
             return NextResponse.json({error: "Invalid password"}, {status: 400})
         }
         console.log(user);
@@ -48,6 +50,7 @@ export async function POST(request: NextRequest){
         return response;
 
     } catch (error: any) {
+
         return NextResponse.json({error: error.message}, {status: 500})
     }
 }
